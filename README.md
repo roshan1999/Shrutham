@@ -13,4 +13,5 @@ This application was further used in Medical Thesis for sound rehabilitation tes
 ---
 ### Submitted for Patenting by Manipal Institute of Technology
 
-### Screenshots: 
+### App mockup:
+![Mobile App mockup](https://github.com/roshan1999/Shrutham/blob/master/mockup/combined.png)
