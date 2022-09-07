@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Klarify</string>
+    <string name="app_slogan">Choose a slogan before testing</string>
+    <string name="get_started">Get Started</string>
+    <string name="existing_user">Already have an account? Login</string>
+    <string name="welcome_new_user">Welcome!\nSign up to get started</string>
+    <string name="name_hint">Name</string>
+    <string name="hospital_id_hint">Hospital-ID</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="DOB_hint">Date of Birth (dd-mm-yyyy)</string>
+    <string name="male_hint">Male</string>
+    <string name="female_hint">Female</string>
+    <string name="register_hint">Sign Up</string>
+    <string name="welcome_old_user">Welcome Back!\nLogin to continue progress</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="Send_otp">Send OTP</string>
+    <string name="new_user">New to Klarify? Register here</string>
+    <string name="otp_hint">OTP</string>
+    <string name="level_1">Level 1</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="level_2">Level 2</string>
+    <string name="level_3">Level 3</string>
+    <string name="level_4">Level 4</string>
+    <string name="words_matched_correctly">Words matched Correctly</string>
+    <string name="words_matched_incorrectly">Words matched Incorrectly</string>
+    <string name="your_speech_will_show_here">Your speech will show here</string>
+    <string name="todo">TODO</string>
+</resources>

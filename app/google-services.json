@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "402047111520",
+    "firebase_url": "https://klarify-b1bb8-default-rtdb.firebaseio.com",
+    "project_id": "klarify-b1bb8",
+    "storage_bucket": "klarify-b1bb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402047111520:android:39fe599e777ef7609ace05",
+        "android_client_info": {
+          "package_name": "com.example.clarify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402047111520-j5hvjekrflij5p107q9jbh0c8a10b6kk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clarify",
+            "certificate_hash": "e3cba9aadef978202f621960dd678de800badcbe"
+          }
+        },
+        {
+          "client_id": "402047111520-gca6d4qjiv0lp9evu9qj0q60t65lvev1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsIDSkxsGfhI9SDxbl5Fq44LKrEpeBogU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402047111520-gca6d4qjiv0lp9evu9qj0q60t65lvev1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

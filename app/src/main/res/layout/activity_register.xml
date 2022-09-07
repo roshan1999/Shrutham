@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <ImageView
+        android:id="@+id/IVLogo"
+        android:transitionName="appLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/TVGreeting"
+        app:layout_constraintVertical_bias="1.0"
+        android:src="@drawable/klarify_logo"/>
+
+    <TextView
+        android:id="@+id/TVGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/welcome_new_user"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:transitionName="appName"
+        app:layout_constraintTop_toBottomOf="@id/IVLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/input_group"/>
+
+    <LinearLayout
+        android:id="@+id/input_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintTop_toBottomOf="@id/TVGreeting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TFName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/name_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:nextFocusRight="@id/HospitalID"
+                android:nextFocusLeft="@id/HospitalID"
+                android:nextFocusDown="@id/HospitalID"
+                android:nextFocusForward="@id/HospitalID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/TFPhone"
+            android:id="@+id/TFHospitalID"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/hospital_id_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/HospitalID"
+                android:nextFocusDown="@id/TFPhone"
+                android:maxLines="1"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TFPhone"
+            android:nextFocusDown="@id/TFDOB"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/phone_number_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:nextFocusDown="@id/TFDOB"
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TFDOB"
+            android:nextFocusDown="@id/RGGender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/DOB_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:nextFocusDown="@id/RGGender"
+                android:maxLines="1"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/RGGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/RBMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male_hint"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/RBFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:text="@string/female_hint" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/BTNRegister"
+            android:transitionName="colorBtn"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/register_hint"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/BTNLogin"
+            android:transitionName="colorlessBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_margin="10dp"
+            android:text="@string/existing_user"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

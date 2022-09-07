@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/IVLogo"
+        android:transitionName="appLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/TVGreeting"
+        app:layout_constraintVertical_bias="1.0"
+        android:src="@drawable/klarify_logo"/>
+
+    <TextView
+        android:id="@+id/TVGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/welcome_old_user"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:transitionName="appName"
+        app:layout_constraintTop_toBottomOf="@id/IVLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/input_group"/>
+
+    <LinearLayout
+        android:id="@+id/input_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintTop_toBottomOf="@id/TVGreeting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="10dp"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TFPhone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/phone_number_hint">
+            <com.google.android.material.textfield.TextInputEditText
+                android:maxLines="1"
+                android:inputType="phone"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/BTNLogin"
+            android:transitionName="colorBtn"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/Send_otp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/BTNRegister"
+            android:transitionName="colorlessBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_margin="10dp"
+            android:text="@string/new_user"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:onClick="onRegister"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
